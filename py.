@@ -1,0 +1,33 @@
+# Smart Medication Assistance System
+
+name = input("Enter child name: ")
+age = int(input("Enter child age: "))
+weight = float(input("Enter child weight: "))
+height = float(input("Enter child height: "))
+
+n = int(input("Enter number of medications: "))
+meds = []
+
+for i in range(n):
+    med = input("Enter medication name: ")
+    status = input("Is prescription available? (Yes/No): ")
+    
+    if status == "No":
+        print("WARNING: No prescription available for", med)
+        meds.append(med + " (No Prescription)")
+    else:
+        dose = input("Enter dose: ")
+        freq = input("Enter frequency: ")
+        meds.append(med + " - Dose: " + dose + ", Freq: " + freq)
+
+print("\n Child Info    ")
+print("Name:", name)
+print("Age:", age)
+print("Weight:", weight)
+print("Height:", height)
+
+print("\n   Medications    ")
+for m in meds:
+    print(m)
+
+print("Process completed.")
